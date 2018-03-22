@@ -43,6 +43,7 @@
             android:orientation="vertical">
 
             <TextView
+                android:id="@+id/home_team_score"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="0"
@@ -55,7 +56,7 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Team A"
+                android:text="Home Team"
                 android:padding="8dp"
                 android:gravity="center"
                 android:textColor="#000000"/>
@@ -65,12 +66,14 @@
                 android:layout_height="wrap_content"
                 android:text="Add Run"
                 android:layout_margin="24dp"
-                android:background="#4c8eff"/>
+                android:background="#4c8eff"
+                android:onClick="addRunHomeTeam"/>
 
             <TextView
+                android:id="@+id/home_team_out"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="0 out of 3"
+                android:text="0"
                 android:gravity="center"
                 android:textColor="#000000"/>
 
@@ -79,7 +82,8 @@
                 android:layout_height="wrap_content"
                 android:text="Add Out"
                 android:layout_margin="24dp"
-                android:background="#bf4e5f"/>
+                android:background="#bf4e5f"
+                android:onClick="addOutHomeTeam"/>
 
         </LinearLayout>
         <LinearLayout
@@ -89,6 +93,7 @@
             android:orientation="vertical">
 
             <TextView
+                android:id="@+id/away_team_score"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:gravity="center"
@@ -101,7 +106,7 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Team B"
+                android:text="Away Team"
                 android:gravity="center"
                 android:padding="8dp"
                 android:textColor="#000000"/>
@@ -111,12 +116,14 @@
                 android:layout_height="wrap_content"
                 android:text="Add Run"
                 android:layout_margin="24dp"
-                android:background="#4c8eff"/>
+                android:background="#4c8eff"
+                android:onClick="addRunAwayTeam"/>
 
             <TextView
+                android:id="@+id/away_team_out"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="0 out of 3"
+                android:text="0 "
                 android:gravity="center"
                 android:textColor="#000000"/>
 
@@ -125,10 +132,19 @@
                 android:layout_height="wrap_content"
                 android:text="Add Out"
                 android:layout_margin="24dp"
-                android:background="#bf4e5f"/>
+                android:background="#bf4e5f"
+                android:onClick="addOutHomeTeam"/>
 
         </LinearLayout>
 
     </LinearLayout>
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="New Game!"
+        android:gravity="center"
+        android:layout_margin="5dp"
+        android:onClick="newGame"
+        />
 
 </LinearLayout>
